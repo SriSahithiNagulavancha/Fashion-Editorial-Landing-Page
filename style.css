@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "Monument";
+  src: url("./fonts/MonumentExtended-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(114, 88, 101, 0.881);
+  display: flex;
+}
+
+/* Navbar */
+#nav {
+  position: absolute;
+  left: 7%;
+  top: 5%;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+#nav img {
+  height: 60px;
+}
+
+#nav h5 {
+  font-size: 20px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+}
+
+.nav-links {
+  position: absolute;
+  top: 7%;
+  right: 7%;
+  display: flex;
+  gap: 28px;
+  z-index: 10;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Layout Sections */
+#page1 {
+  height: 100%;
+  width: 26%;
+}
+
+#page2 {
+  height: 100%;
+  width: 67%;
+  background-image: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=387&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+#page3 {
+  height: 100%;
+  width: 7%;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(123, 114, 117, 0.393);
+}
+
+/* Hero Text */
+#text-div {
+  position: absolute;
+  width: 520px;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  margin-top: 70px;
+}
+
+#text-div h1 {
+  font-size: 80px;
+  font-family: "Monument", Arial, sans-serif;
+  font-weight: 800;
+  color: #fff;
+  line-height: 78px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+#cta-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 26px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+#cta-btn:hover {
+  background-color: #fff;
+  color: rgba(114, 88, 101, 0.95);
+}
+
+.subtitle {
+  margin-top: 20px;
+  width: 360px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Small Image */
+#small-img-div {
+  width: 300px;
+  height: 400px;
+  background-image: url("https://images.unsplash.com/photo-1529680459049-bf0340fa0755?q=80&w=387&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 70%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 8;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.4s ease;
+}
+
+#small-img-div:hover {
+  transform: translateY(-50%) scale(1.04);
+}
+
+/* Vertical Text */
+#vertical-text {
+  position: absolute;
+  transform: rotate(90deg);
+  right: -80%;
+  top: -7%;
+  z-index: 8;
+  transform-origin: 0% 0%;
+}
+
+#vertical-text h1 {
+  font-size: 70px;
+  font-family: "Monument", Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #main {
+    min-height: 100vh;
+  }
+
+  #page1 {
+    width: 10%;
+  }
+
+  #page2 {
+    width: 90%;
+  }
+
+  #page3 {
+    display: none;
+  }
+
+  #nav {
+    width: 80%;
+    left: 6%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #text-div {
+    width: 90%;
+    left: 6%;
+  }
+
+  #text-div h1 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 4px;
+  }
+
+  .subtitle {
+    width: 280px;
+  }
+
+  #small-img-div {
+    width: 180px;
+    height: 250px;
+    right: 6%;
+    top: 72%;
+  }
+
+  #vertical-text {
+    display: none;
+  }
+}
